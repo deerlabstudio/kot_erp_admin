@@ -7,7 +7,6 @@ import '../../styles/Crud.css';
 // Components
 import DataTable from './data-table';
 import ModalSave from './data-modal';
-import UpdatePasswordModal from './update-password-modal';
 import AlertMessage from '../../components/Alert';
 
 // Services
@@ -18,10 +17,9 @@ import {
   deleteUsers,
 } from '../../lib/services/users';
 
-class Users extends Component {
+class UsersCompanies extends Component {
   state = {
     showModal: false,
-    showModalPassword: false,
     users: [],
     userWorking: {},
     actionType: 1,
@@ -50,7 +48,6 @@ class Users extends Component {
   handleActionNew = () => {
     this.setState({
       showModal: true,
-      showModalPassword: false,
       actionType: 1,
     });
   }
@@ -58,7 +55,6 @@ class Users extends Component {
   handleEditAction = (user) => {
     this.setState({
       showModal: true,
-      showModalPassword: false,
       actionType: 2,
       userWorking: user,
     });
@@ -67,7 +63,6 @@ class Users extends Component {
   handleDeleteAction = (user) => {
     this.setState({
       showModal: true,
-      showModalPassword: false,
       actionType: 3,
       userWorking: user,
     });
@@ -93,28 +88,14 @@ class Users extends Component {
 
     this.setState({
       showModal: false,
-      showModalPassword: false,
       userWorking: {},
       actionType: 0,
     });
   }
 
-  handleActionUpdatePassword = (user) => {
-    this.setState({
-      showModal: false,
-      showModalPassword: true,
-      userWorking: user,
-    });
-  }
-
-  handleSubmitChangePassword = (data) => {
-    console.log(data);
-  }
-
   handleCancelModal = () => {
     this.setState({
       showModal: false,
-      showModalPassword: false,
       userWorking: {},
       actionType: 0,
     });
@@ -146,7 +127,6 @@ class Users extends Component {
   render() {
     const {
       showModal,
-      showModalPassword,
       users,
       userWorking,
       hasError,
@@ -186,20 +166,10 @@ class Users extends Component {
               />
             ) : null
           }
-          {
-            showModalPassword ? (
-              <UpdatePasswordModal
-                data={userWorking}
-                showModal={showModalPassword}
-                onCancel={this.handleCancelModal}
-                onSubmit={this.handleSubmitChangePassword}
-              />
-            ) : null
-          }
         </div>
       </>
     );
   }
 }
 
-export default Users;
+export default UsersCompanies;

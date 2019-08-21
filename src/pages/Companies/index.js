@@ -68,6 +68,10 @@ class Companies extends Component {
     });
   }
 
+  handleViewUsersAction = (company) => {
+    this.props.history.push(`/backoffice/companies/${company.id}/users`);
+  }
+
   handleSubmitModal = (data) => {
     const { actionType } = this.state;
 
@@ -152,6 +156,7 @@ class Companies extends Component {
               items={companies}
               onEdit={this.handleEditAction}
               onDelete={this.handleDeleteAction}
+              onViewUsers={this.handleViewUsersAction}
             />
           </Row>
           {

@@ -9,12 +9,13 @@ import Dashboard from '../../pages/Dashboard';
 import Companies from '../../pages/Companies';
 import UsersTypes from '../../pages/UsersTypes';
 import Users from '../../pages/Users';
+import UsersCompanies from '../../pages/UsersCompanies';
 
 const Content = () => (
   <div className="content-app">
     <Route path="/backoffice/dashboard" component={Dashboard} />
     <Route exact path="/backoffice/companies" component={Companies} />
-    <Route path="/backoffice/companies/:id/users" component={Users} />
+    <Route path="/backoffice/companies/:id/users" component={UsersCompanies} />
     <Route path="/backoffice/userstypes" component={UsersTypes} />
     <Route path="/backoffice/users" component={Users} />
   </div>

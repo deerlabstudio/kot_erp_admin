@@ -125,7 +125,7 @@ class ModalSave extends Component {
           }
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={this.handleOnCancel}>Close</Button>
+          <Button variant="secondary" onClick={this.handleOnCancel}>Cancelar</Button>
           <Button
             variant={actionType.variant}
             onClick={this.handleOnSubmit}

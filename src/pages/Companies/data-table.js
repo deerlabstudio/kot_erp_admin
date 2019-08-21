@@ -23,7 +23,8 @@ const DataTable = props => (
             <td>{item.status ? 'Activo' : 'Inactivo'}</td>
             <td>
               <Button variant="outline-info" onClick={() => props.onEdit(item)}>Editar</Button>
-              <Button variant="outline-danger" onClick={() => props.onDelete(item)}>Eliminar</Button>
+              <Button variant="outline-danger" className="ml-1" onClick={() => props.onDelete(item)}>Eliminar</Button>
+              <Button variant="secondary" className="ml-1" onClick={() => props.onViewUsers(item)}>Usuarios</Button>
             </td>
           </tr>
         ))

@@ -21,7 +21,7 @@ const DataTable = props => (
             <td>{item.description}</td>
             <td>
               <Button variant="outline-info" onClick={() => props.onEdit(item)}>Editar</Button>
-              <Button variant="outline-danger" onClick={() => props.onDelete(item)}>Eliminar</Button>
+              <Button variant="outline-danger" className="ml-1" onClick={() => props.onDelete(item)}>Eliminar</Button>
             </td>
           </tr>
         ))
