@@ -1,0 +1,9 @@
+.panel {
+  background: white;
+  border: 1px solid #ECECEC;
+  padding: 60px;
+}
+
+.table-crud {
+  margin-top: 25px;
+}

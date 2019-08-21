@@ -1,0 +1,36 @@
+.container-notfound {
+  background: #FFF;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  width: 100%;
+}
+
+.wrap-notfound {
+  width: 390px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 55px 55px;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.message {
+  text-align: center;
+}
+
+.button-back {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}

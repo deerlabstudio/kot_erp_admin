@@ -1,0 +1,21 @@
+.top-bar-nav {
+  background: #333547;
+  color: #8699AD;
+}
+
+.user-photo {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  border: 1px solid #FFFFFF;
+}
+
+.toogle-menu-button {
+  visibility: hidden;
+}
+
+@media (max-width: 768px) {
+  .toogle-menu-button {
+    visibility: visible;
+  }
+}
